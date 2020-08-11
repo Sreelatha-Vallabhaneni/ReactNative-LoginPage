@@ -42,7 +42,9 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,0.2)",
     color: '#FFF',
     marginBottom: 10,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    borderTopLeftRadius: 16,
+    borderBottomRightRadius:16
   },
   buttonContainer: {
     backgroundColor: '#2988b9',

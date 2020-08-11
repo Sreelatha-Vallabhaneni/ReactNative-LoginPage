@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     backgroundColor: '#2988b9',
-    paddingVertical: 15
+    paddingVertical: 15,
+    borderRadius: 5
   },
   buttonText: {
     textAlign: 'center',

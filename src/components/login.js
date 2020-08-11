@@ -1,12 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, StatusBar } from "react-native";
 import LoginForm from './form';
 
 
 function LoginPage() {
   return (
     <View style={styles.container}>
-      <Text>Github Login Page!</Text>
+      <StatusBar barStyle="light-content" />
+      <Text style={{color: "navy", fontWeight: "700"}} >Github Login Page!</Text>
       <View>
         <LoginForm />
       </View>

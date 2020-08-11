@@ -1,23 +1,34 @@
-import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView } from "react-native";
 
 function LoginForm(){
+  const [passwordInput, setPasswordInput] = useState('')
     return (
-      <View style={styles.container}>
-        <TextInput
-          style={styles.input}
-          placeholder="Username or email"
-          placeholderTextColor="rgba(255,255,255,0.7)"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Password"
-          placeholderTextColor="rgba(255,255,255,0.7)"
-        />
-        <TouchableOpacity>
-          <Text>LOGIN</Text>
-        </TouchableOpacity>
-      </View>
+      <KeyboardAvoidingView behavior="padding">
+        <View style={styles.container}>
+          <TextInput
+            style={styles.input}
+            placeholder="Username or email"
+            placeholderTextColor="rgba(255,255,255,0.7)"
+            returnKeyType="next"
+            onSubmitEditing = {()=> passwordInput.focus()}
+            keyboardType = "email-address"
+            autoCapitalize="none"
+            autoCorrect={false}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Password"
+            placeholderTextColor="rgba(255,255,255,0.7)"
+            secureTextEntry
+            returnKeyType= "go"
+            ref={(input) => setPasswordInput(input)}
+          />
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.buttonText}>LOGIN</Text>
+          </TouchableOpacity>
+        </View>
+      </KeyboardAvoidingView>
     );
 }
 
@@ -29,11 +40,20 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   input: {
-    padding: 20,
+    width: 250,
     height: 40,
     backgroundColor: "rgba(255,255,255,0.2)",
     color: '#FFF',
-    marginBottom: 20,
+    marginBottom: 10,
     paddingHorizontal: 10
   },
+  buttonContainer: {
+    backgroundColor: '#2988b9',
+    paddingVertical: 15
+  },
+  buttonText: {
+    textAlign: 'center',
+    color: '#FFFFFF',
+    fontWeight: '700'
+  }
 });

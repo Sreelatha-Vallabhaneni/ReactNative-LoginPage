@@ -32,9 +32,6 @@ function LoginForm(){
     );
 }
 
-export default LoginForm;
-
-
 const styles = StyleSheet.create({
   container: {
     padding: 20,
@@ -57,3 +54,5 @@ const styles = StyleSheet.create({
     fontWeight: '700'
   }
 });
+
+export default LoginForm;

@@ -1,13 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View, StatusBar, Image } from "react-native";
 import LoginForm from './form';
-//import logo from '../../assets/'
 
 
 function LoginPage() {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="light-content" style="auto" />
       <Image source={require("../../assets/reactnative-logo.png")} style={styles.logo} />
       <Text style={{color: "navy", fontWeight: "700"}} >React Native Login Page!</Text>
       <View>

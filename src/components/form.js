@@ -40,22 +40,25 @@ const styles = StyleSheet.create({
     width: 250,
     height: 40,
     backgroundColor: "rgba(255,255,255,0.2)",
-    color: '#FFF',
+    color: "#FFF",
     marginBottom: 10,
     paddingHorizontal: 10,
     borderTopLeftRadius: 16,
-    borderBottomRightRadius:16
+    borderBottomRightRadius: 16,
+    borderColor: "pink",
+    borderLeftWidth: 6,
+    borderStyle: "solid",
   },
   buttonContainer: {
-    backgroundColor: '#2988b9',
+    backgroundColor: "#2988b9",
     paddingVertical: 15,
-    borderRadius: 5
+    borderRadius: 5,
   },
   buttonText: {
-    textAlign: 'center',
-    color: '#FFFFFF',
-    fontWeight: '700'
-  }
+    textAlign: "center",
+    color: "#FFFFFF",
+    fontWeight: "700",
+  },
 });
 
 export default LoginForm;
